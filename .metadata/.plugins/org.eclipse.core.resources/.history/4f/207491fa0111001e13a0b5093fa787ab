@@ -1,0 +1,18 @@
+package org.javacoders.assignment;
+
+import reactor.core.publisher.Flux;
+import reactor.core.publisher.Sinks;
+
+public class SlackRoom {
+	
+	private String name;
+	private Sinks.Many<SlackMessage> sink;
+	private Flux<SlackMessage> flux;
+	
+	public SlackRoom(String name) {
+		this.name = name;
+	}
+	
+	
+
+}

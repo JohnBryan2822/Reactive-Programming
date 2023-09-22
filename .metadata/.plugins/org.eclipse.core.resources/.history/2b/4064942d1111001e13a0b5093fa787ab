@@ -1,0 +1,21 @@
+package org.javacoders.helper;
+
+import java.util.Map;
+
+public class UserService {
+	
+	public static void main(String[] args) {
+		
+		private static Map<String, String> map = Map.of(
+					"sam", "std",
+					"mike", "prime"
+					
+				);
+		
+		
+		
+	}
+	
+	
+
+}

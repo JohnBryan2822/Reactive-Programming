@@ -1,0 +1,36 @@
+package org.javacoders;
+
+import java.nio.channels.Pipe.SinkChannel;
+
+import org.javacoders.courseUtil.Util;
+
+import reactor.core.publisher.Flux;
+import reactor.core.publisher.Sinks;
+
+public class Main {
+	
+	
+	public static void main(String[] args) {
+		
+		
+		Sinks.Many<Object> sink = Sinks.many().multicast().directBestEffort();
+		
+		Flux<Object> flux = sink.asFlux();
+		
+		sink.tryEmitNext("Hi");
+		
+		flux.subscribe(Util.subscriber("Mike"));
+		
+		flux.subscribe(Util.subscriber("John"));
+		
+		sink.tryEmitNext("Hello again - 1");
+		sink.tryEmitNext("Hello again");
+		sink.tryEmitNext("Hello again");
+		
+		Flux.range(1, 3)
+			.subscribe(Util.subscriber());
+		
+		
+	}
+
+}

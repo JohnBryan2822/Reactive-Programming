@@ -1,0 +1,23 @@
+package org.javacoders;
+
+import org.javacoders.courseUtil.Util;
+
+import reactor.core.publisher.Flux;
+
+public class Main {
+	
+	public Flux<String> flux = Flux.range(1, 10)
+									.map(i -> "count : " + i);
+	
+	public static void main(String[] args) {
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+
+}

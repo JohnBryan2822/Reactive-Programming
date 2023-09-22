@@ -1,0 +1,17 @@
+package org.javacoders;
+
+import reactor.core.publisher.Flux;
+
+public class Lec05Group {
+	
+	public static void main(String[] args) {
+		
+		
+		
+	}
+	
+	private static void process(Flux<Integer> flux, int key) {
+		flux.subscribe(i -> System.out.println("Key: " + key + ", Item: " + i));
+	}
+
+}

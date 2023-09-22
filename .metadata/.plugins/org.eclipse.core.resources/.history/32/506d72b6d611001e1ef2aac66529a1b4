@@ -1,0 +1,18 @@
+package org.javacoders.test;
+
+import org.javacoders.helper.BookOrder;
+import org.junit.jupiter.api.Test;
+
+import reactor.core.publisher.Mono;
+
+public class Lec04AssertTest {
+	
+	@Test
+	public void test1() {
+		Mono<BookOrder> mono = Mono.fromSupplier(() -> new BookOrder());
+	}
+	
+	
+	
+
+}

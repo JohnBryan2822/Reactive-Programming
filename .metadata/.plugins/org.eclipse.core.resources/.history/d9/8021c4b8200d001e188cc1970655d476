@@ -1,0 +1,17 @@
+package org.javacoders.helper;
+
+import org.javacoders.courseUtil.Util;
+
+import reactor.core.publisher.Flux;
+
+public class NameGenerator {
+	
+	public Flux<String> nameGenerator(){
+		return Flux.generate(stringSynchronousSink -> {
+			System.out.println("Generated flesh");
+			Util.sleepSeconds(1);
+			String name = Util.faker().name().firstName();
+		});
+	}
+
+}

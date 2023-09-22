@@ -1,0 +1,38 @@
+package org.javacoders;
+
+import java.util.Map;
+import java.util.Set;
+import java.util.function.Function;
+
+import org.javacoders.assignment.OrderProcessor;
+import org.javacoders.assignment.OrderService;
+import org.javacoders.assignment.PurchaseOrder;
+import org.javacoders.courseUtil.Util;
+
+import reactor.core.publisher.Flux;
+
+public class Lec06Assignment {
+	
+	public static void main(String[] args) {
+		
+		Map<String, Function<Flux<PurchaseOrder>, Flux<PurchaseOrder>>> map = Map.of(
+				"Kids", OrderProcessor.kidsProcessing(),
+				"Automotive", OrderProcessor.automotiveProcessing()
+		);
+		
+		Set<String> set = map.keySet();
+		
+		OrderService.orderStream()
+			.filter(p -> set.contains(p.getCategory()))
+			.groupBy(PurchaseOrder::getCategory)
+			.flatMap(gf -> map.get(gf.key()).apply(gf)) // flux
+			.subscribe(Util.subscriber());
+		
+		Util.sleepSeconds(60);
+		
+		
+	}
+	
+	
+
+}

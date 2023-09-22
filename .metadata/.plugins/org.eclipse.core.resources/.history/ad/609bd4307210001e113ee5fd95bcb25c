@@ -1,0 +1,29 @@
+package org.javacoders;
+
+import java.nio.channels.Pipe.SinkChannel;
+
+import org.javacoders.courseUtil.Util;
+
+import reactor.core.publisher.Flux;
+import reactor.core.publisher.Sinks;
+
+public class Main {
+	
+	
+	public static void main(String[] args) {
+		
+		
+		Flux<Integer> flux2 = Flux.range(1, 1000);
+		
+		
+		
+		
+		flux2.subscribe(Util.subscriber());
+		
+		
+		
+		
+		
+	}
+
+}

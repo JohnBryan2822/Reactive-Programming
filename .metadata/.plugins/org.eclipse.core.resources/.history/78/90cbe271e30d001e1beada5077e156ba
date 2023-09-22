@@ -1,0 +1,11 @@
+package org.javacoders.helper;
+
+import reactor.core.publisher.Flux;
+
+public class QatarFlights {
+	
+	public static Flux<String> getFlights(){
+		
+	}
+
+}

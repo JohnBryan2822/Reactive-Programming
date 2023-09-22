@@ -1,0 +1,10 @@
+package org.javacoders.test;
+
+import org.junit.jupiter.api.Test;
+
+public class Lec01SVDemoTest {
+	@Test
+	public void test1() {
+		
+	}
+}

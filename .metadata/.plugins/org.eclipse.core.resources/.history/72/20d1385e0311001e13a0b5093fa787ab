@@ -1,0 +1,24 @@
+package org.javacoders;
+
+import org.javacoders.assignment.SlackMember;
+import org.javacoders.assignment.SlackRoom;
+
+public class Lec07SlackDemo {
+	
+	public static void main(String[] args) {
+		
+		SlackRoom slackRoom = new SlackRoom("reactor");
+		
+		SlackMember sam = new SlackMember("Sam");
+		SlackMember sam = new SlackMember("Jake");
+		SlackMember sam = new SlackMember("John");
+		
+		
+		
+		
+	}
+	
+	
+	
+
+}

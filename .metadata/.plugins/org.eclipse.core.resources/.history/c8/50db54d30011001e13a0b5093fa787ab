@@ -1,0 +1,8 @@
+package org.javacoders.assignment;
+
+public class SlackMessage {
+
+	private static final String FORMAT = "[%s -> %s] : %s";
+	
+	
+}

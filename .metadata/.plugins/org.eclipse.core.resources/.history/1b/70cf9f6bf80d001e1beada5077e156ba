@@ -1,0 +1,14 @@
+package org.javacoders.helper;
+
+public class BookOrder {
+	
+	private String title;
+	private String author;
+	private String category;
+	private double price;
+	
+	public BookOrder() {
+		
+	}
+
+}

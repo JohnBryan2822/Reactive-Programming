@@ -1,0 +1,16 @@
+package org.javacoders;
+
+import org.javacoders.courseUtil.Util;
+
+import reactor.core.publisher.Mono;
+
+public class Lec04RetryWhenAdvance {
+	
+	private static Mono<String> orderService(String ccNumber){
+		return Mono.fromSupplier(() -> {
+			processPayment(ccNumber)
+			return Util.faker().idNumber().valid();
+		});
+	}
+
+}

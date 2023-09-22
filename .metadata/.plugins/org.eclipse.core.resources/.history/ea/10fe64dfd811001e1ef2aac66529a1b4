@@ -1,0 +1,19 @@
+package org.javacoders.test;
+
+import java.time.Duration;
+
+import reactor.core.publisher.Flux;
+
+public class Lec05VirtualTimeTest {
+	
+
+	
+	private Flux<String> timeConsumingFlux(){
+		return Flux.range(1, 4)
+				.delayElements(Duration.ofSeconds(5))
+				.map(i -> "a"+i);
+	}
+	
+	
+
+}

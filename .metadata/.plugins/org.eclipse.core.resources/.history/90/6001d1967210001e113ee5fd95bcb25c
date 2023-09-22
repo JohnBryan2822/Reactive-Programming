@@ -1,0 +1,34 @@
+package org.javacoders;
+
+import java.nio.channels.Pipe.SinkChannel;
+
+import org.javacoders.courseUtil.Util;
+
+import reactor.core.publisher.Flux;
+import reactor.core.publisher.Sinks;
+import reactor.core.scheduler.Scheduler;
+import reactor.core.scheduler.Schedulers;
+
+public class Main {
+	
+	
+	public static void main(String[] args) {
+		
+		
+		Flux<Integer> flux2 = Flux.range(1, 10)
+									.subscribeOn(Schedulers.parallel());
+		
+		
+		
+		
+		flux2.subscribe(Util.subscriber("Mike"));
+		flux2.subscribe(Util.subscriber("John"));
+		flux2.subscribe(Util.subscriber("Jane"));
+		
+		
+		
+		
+		
+	}
+
+}

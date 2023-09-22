@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;ThreadingAndSchedulars&apos; to &apos;Section08.ThreadingAndSchedulars&apos;" description="Rename resource &apos;ThreadingAndSchedulars&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/ThreadingAndSchedulars" name="Section08.ThreadingAndSchedulars" stamp="1686490143749" updateReferences="true"/>
+</session>

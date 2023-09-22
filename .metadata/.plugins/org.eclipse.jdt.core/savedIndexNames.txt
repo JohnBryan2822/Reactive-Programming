@@ -1,0 +1,16 @@
+INDEX VERSION 1.132+D:\algoS\Reactive Programming\.metadata\.plugins\org.eclipse.jdt.core
+3634598395.index
+1865797976.index
+1247170756.index
+1056596598.index
+352837772.index
+4020048228.index
+1982364653.index
+2844830296.index
+1675387247.index
+1114855036.index
+1789036373.index
+1816628150.index
+582922260.index
+755015107.index
+2788479471.index

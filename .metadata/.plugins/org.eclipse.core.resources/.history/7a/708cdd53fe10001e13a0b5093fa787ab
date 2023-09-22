@@ -1,0 +1,40 @@
+package org.javacoders;
+
+import org.javacoders.courseUtil.Util;
+
+import reactor.core.publisher.Flux;
+import reactor.core.publisher.Sinks;
+
+public class Lec04SinkMulti {
+	
+	public static void main(String[] args) {
+		
+		// handle through which we would push items
+		// by multicast() method multiple subscriber can subscribe
+		Sinks.Many<Object> sink = Sinks.many().multicast().onBackpressureBuffer();
+		
+		// if we use directAllOrNothing() method
+		// nobody gets messages before subscription
+		
+//		Sinks.Many<Object> sink = Sinks.many().multicast().directAllOrNothing();
+		
+		// handle through subscribers will receive items
+		Flux<Object> flux = sink.asFlux();
+		
+		
+		
+		sink.tryEmitNext("Hi");
+		sink.tryEmitNext("Hello");
+		
+		flux.subscribe(Util.subscriber("Sam"));
+		flux.subscribe(Util.subscriber("Mike"));
+		sink.tryEmitNext("?");
+		
+		flux.subscribe(Util.subscriber("John"));
+		sink.tryEmitNext("new message");
+		
+		
+	}
+	
+
+}

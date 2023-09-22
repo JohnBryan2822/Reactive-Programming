@@ -1,0 +1,24 @@
+package org.javacoders;
+
+import java.time.Duration;
+
+import org.javacoders.courseUtil.Util;
+
+import reactor.core.publisher.Flux;
+
+public class Lec04Window {
+	
+	public static void main(String[] args) {
+		
+		eventStream()
+			.window(5)
+			.subscribe(Util.subscriber());
+		
+	}
+	
+	private static Flux<String> eventStream(){
+		return Flux.interval(Duration.ofMillis(500))
+				.map(i -> "event" + i);
+	}
+
+}

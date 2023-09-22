@@ -1,0 +1,27 @@
+package org.javacoders;
+
+import java.nio.channels.Pipe.SinkChannel;
+
+import org.javacoders.courseUtil.Util;
+
+import reactor.core.publisher.Flux;
+import reactor.core.publisher.Sinks;
+
+public class Main {
+	
+	
+	public static void main(String[] args) {
+		
+		Sinks.Many<Object> sink = Sinks.many().unicast().onBackpressureBuffer();
+		
+		Flux<String> flux = Flux.range(1, 10)
+				.map(i -> "count : " + i);
+		
+		flux.subscribe(Util.subscriber());
+		
+		
+		
+		
+	}
+
+}

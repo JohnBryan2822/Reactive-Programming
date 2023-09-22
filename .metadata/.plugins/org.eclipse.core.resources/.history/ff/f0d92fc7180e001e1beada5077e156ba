@@ -1,0 +1,19 @@
+package org.javacoders.assignment;
+
+import java.util.function.Function;
+
+import reactor.core.publisher.Flux;
+
+public class OrderProcessor {
+	
+	public static Function<Flux<PurchaseOrder>, Flux<PurchaseOrder>> automotiveProcessing(){
+		return flux -> flux
+				.doOnNext(p -> p.setPrice(1.1 * p.getPrice()))
+				.doOnNext(p -> p.setItem("{{ " + p.getItem() + " }}"));
+	}
+	
+	
+	
+	
+
+}

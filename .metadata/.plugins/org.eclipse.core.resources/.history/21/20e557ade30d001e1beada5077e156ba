@@ -1,0 +1,13 @@
+package org.javacoders.helper;
+
+import org.javacoders.courseUtil.Util;
+
+import reactor.core.publisher.Flux;
+
+public class QatarFlights {
+	
+	public static Flux<String> getFlights(){
+		return Flux.range(1, Util.faker().random().nextInt(1, 5))
+	}
+
+}

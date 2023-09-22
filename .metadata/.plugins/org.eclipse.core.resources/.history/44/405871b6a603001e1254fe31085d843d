@@ -1,0 +1,9 @@
+package org.javacoders;
+
+public class Lec05FluxRange {
+
+	public static void main(String[] args) {
+		
+	}
+	
+}

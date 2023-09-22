@@ -1,0 +1,31 @@
+package org.javacoders.helper;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.javacoders.Lec01StartWith;
+import org.javacoders.courseUtil.Util;
+
+import reactor.core.publisher.Flux;
+
+public class NameGenerator {
+	
+	private List<String> list = new ArrayList<>();
+		
+	public Flux<String> generatNames(){
+		return Flux.generate(stringSynchronousSink -> {
+			System.out.println("Generated flesh");
+			Util.sleepSeconds(1);
+			String name = Util.faker().name().firstName();
+			list.add(name);
+			stringSynchronousSink.next(name);
+		})
+				.cast(String.class)
+				.Lec01StartWith(getFromCache());
+	}
+	
+	private Flux<String> getFromCache(){
+		return Flux.fromIterable(list);
+	}
+
+}

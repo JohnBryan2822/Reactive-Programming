@@ -1,0 +1,17 @@
+package org.javacoders;
+
+import org.javacoders.courseUtil.Util;
+
+import reactor.core.publisher.Flux;
+
+public class Lec05FluxRange {
+
+	public static void main(String[] args) {
+		
+		// Here the first value is 'start from'
+		// and the second one is 'count'
+		Flux.range(3, 10).subscribe(Util.onNext());
+		
+	}
+	
+}

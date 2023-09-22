@@ -1,0 +1,16 @@
+package org.javacoders.helper;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class BookService {
+	
+	private static Map<String, Integer> map = new HashMap<>();
+	
+	static {
+		map.put("std", 2);
+	}
+	
+	
+
+}

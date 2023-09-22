@@ -1,0 +1,10 @@
+package org.javacoders;
+
+public class Lec01Buffer {
+
+	public static void main(String[] args) {
+		
+	}
+	
+	
+}

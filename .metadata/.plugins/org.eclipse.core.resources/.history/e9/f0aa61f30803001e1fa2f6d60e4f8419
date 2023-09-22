@@ -1,0 +1,21 @@
+package org.javacoders;
+
+import java.util.Arrays;
+import java.util.List;
+
+import org.javacoders.courseUtil.Util;
+
+import reactor.core.publisher.Flux;
+
+public class Lec03FluxFromArrayOrList {
+	
+	public static void main(String[] args) {
+		
+		List<String> strings = Arrays.asList("a", "b", "c");
+		
+		Flux.fromIterable(strings)
+			.subscribe(Util.onNext());
+		
+	}
+	
+}

@@ -1,0 +1,22 @@
+package org.javacoders;
+
+import java.time.Duration;
+
+import org.javacoders.helper.BookOrder;
+
+import reactor.core.publisher.Flux;
+
+public class Lec03Assignment {
+	
+	public static void main(String[] args) {
+		
+		
+		
+	}
+	
+	private static Flux<BookOrder> bookStream(){
+		return Flux.interval(Duration.ofMillis(200))
+				.map(i -> new BookOrder());
+	}
+
+}

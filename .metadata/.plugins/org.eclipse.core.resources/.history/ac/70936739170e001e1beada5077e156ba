@@ -1,0 +1,10 @@
+package org.javacoders.assignment;
+
+public class PurchaseOrder {
+	
+	private String item;
+	private double price;
+	private String category;
+	
+
+}

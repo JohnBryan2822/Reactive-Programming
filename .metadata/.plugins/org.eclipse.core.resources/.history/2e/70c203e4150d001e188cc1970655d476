@@ -1,0 +1,16 @@
+package org.javacoders;
+
+import reactor.core.publisher.Flux;
+
+public class Lec01Demo {
+	
+	public static void main(String[] args) {
+		
+		Flux.create(fluxSink -> {
+			
+		})
+		
+		
+	}
+
+}

@@ -1,0 +1,13 @@
+package org.javacoders.helper;
+
+import reactor.core.publisher.Flux;
+
+public class NameGenerator {
+	
+	public Flux<String> nameGenerator(){
+		Flux.generate(stringSynchronousSink -> {
+			
+		})
+	}
+
+}

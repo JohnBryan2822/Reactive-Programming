@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="MavenProjectWizardLocationPage">
+		<list key="location">
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardArchetypePage">
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="Maven2ProjectWizardArchifactPage">
+		<list key="package">
+		</list>
+		<list key="groupId">
+		</list>
+		<list key="artifactId">
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardArtifactPage">
+		<list key="groupId">
+			<item value="Section15.UnitTestting02"/>
+		</list>
+		<list key="name">
+		</list>
+		<list key="artifactId">
+			<item value="UnitTestting02"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.pom.overview">
+	</section>
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+	<section name="wizardPage">
+		<list key="groupId">
+			<item value="Section15.UnitTesting"/>
+			<item value="Section14.Context"/>
+			<item value="Section13.Sink"/>
+			<item value="Example001"/>
+			<item value="Section12.RepeatAndRetry"/>
+			<item value="Section11.Batching"/>
+			<item value="Section10.CombiningPublishers"/>
+			<item value="Section09.BackPressureAndOverflowStrategy"/>
+			<item value="Section08.ThreadingAndSchedulars"/>
+			<item value="Section07.HotAndColdPublishers"/>
+			<item value="Section06.Operators"/>
+			<item value="Section05.Reactor"/>
+		</list>
+		<list key="name">
+		</list>
+		<list key="artifactId">
+			<item value="Section15.UnitTesting"/>
+			<item value="Section14.Context"/>
+			<item value="Section13.Sink"/>
+			<item value="Example001"/>
+			<item value="Section12.RepeatAndRetry"/>
+			<item value="Section11.Batching"/>
+			<item value="Section10.CombiningPublishers"/>
+			<item value="Section09.BackPressureAndOverflowStrategy"/>
+			<item value="ThreadingAndSchedulars"/>
+			<item value="HotAndColdPublishers"/>
+			<item value="operators"/>
+			<item value="Reactor"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+</section>

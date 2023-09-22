@@ -1,0 +1,16 @@
+package org.javacoders;
+
+import reactor.core.publisher.Sinks;
+
+public class Lec01SinkOne {
+	
+	public static void main(String[] args) {
+		
+		// mono 1 value / empty / error
+		Sinks.One<Object> sink = Sinks.one();
+		
+		
+		
+	}
+
+}

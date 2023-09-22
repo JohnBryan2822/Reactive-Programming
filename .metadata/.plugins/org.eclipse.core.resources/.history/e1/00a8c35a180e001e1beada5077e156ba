@@ -1,0 +1,17 @@
+package org.javacoders.assignment;
+
+import java.util.function.Function;
+
+import reactor.core.publisher.Flux;
+
+public class OrderProcessor {
+	
+	public static Function<Flux<PurchaseOrder>, Flux<PurchaseOrder>> automotiveProcessing(){
+		
+	}
+	
+	
+	
+	
+
+}

@@ -1,0 +1,25 @@
+package org.javacoders.test;
+
+import org.junit.jupiter.api.Test;
+
+import reactor.core.publisher.Mono;
+
+public class Lec07ContextTest {
+	
+	@Test
+	public void test1() {
+		
+	}
+	
+	
+	private Mono<String> getWelcomeMessage(){
+		return Mono.deferContextual(ctx -> {
+			if(ctx.hasKey("user")) {
+				return Mono.just("Welcome " + ctx.get("user"));
+			} else {
+				return Mono.error(new RuntimeException("unauthenticated"));
+			}
+		});
+	}
+
+}

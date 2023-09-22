@@ -1,0 +1,17 @@
+package org.javacoders.assignment;
+
+public class SlackMember {
+	
+	private String name;
+	
+	public SlackMember(String name) {
+		this.name = name;
+	}
+	
+	public String getName() {
+		return this.name;
+		
+	}
+	
+
+}

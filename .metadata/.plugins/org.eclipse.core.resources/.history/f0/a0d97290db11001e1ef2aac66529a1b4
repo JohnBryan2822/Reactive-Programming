@@ -1,0 +1,16 @@
+package org.javacoders.test;
+
+import org.junit.jupiter.api.Test;
+
+import reactor.core.publisher.Flux;
+
+public class Lec06ScenarioNameTest {
+	
+	@Test
+	public void test1() {
+		
+		Flux<String> flux = Flux.just("a", "b", "c");
+		
+	}
+
+}
