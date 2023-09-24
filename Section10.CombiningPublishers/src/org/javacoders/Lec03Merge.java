@@ -1,0 +1,27 @@
+package org.javacoders;
+
+import org.javacoders.courseUtil.Util;
+import org.javacoders.helper.AmericanAirlines;
+import org.javacoders.helper.Emirates;
+import org.javacoders.helper.Qatar;
+
+import reactor.core.publisher.Flux;
+
+public class Lec03Merge {
+	
+	public static void main(String[] args) {
+		
+		Flux<String> merge = Flux.merge(
+				Qatar.getFlights(),
+				Emirates.getFlights(),
+				AmericanAirlines.getFlights()
+		);
+		
+		merge.subscribe(Util.subscriber());
+		
+		Util.sleepSeconds(10);
+		
+		
+	}
+
+}
