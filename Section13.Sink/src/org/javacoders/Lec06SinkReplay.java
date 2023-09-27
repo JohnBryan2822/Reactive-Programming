@@ -1,0 +1,34 @@
+package org.javacoders;
+
+import org.javacoders.courseUtil.Util;
+
+import reactor.core.publisher.Flux;
+import reactor.core.publisher.Sinks;
+
+public class Lec06SinkReplay {
+	
+public static void main(String[] args) {
+		
+		// you can give number as a parameter to all() method
+		// by this, you can say how many last messages others can see
+		Sinks.Many<Object> sink = Sinks.many().replay().all();
+		
+		Flux<Object> flux = sink.asFlux();
+		
+		sink.tryEmitNext("Hi");
+		sink.tryEmitNext("Hello");
+		
+		flux.subscribe(Util.subscriber("Sam"));
+		flux.subscribe(Util.subscriber("Mike"));
+		sink.tryEmitNext("?");
+		
+		flux.subscribe(Util.subscriber("John"));
+		sink.tryEmitNext("new message");
+		
+		
+	}
+	
+	
+	
+
+}
