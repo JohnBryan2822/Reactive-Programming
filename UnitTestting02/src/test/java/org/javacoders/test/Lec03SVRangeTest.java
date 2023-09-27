@@ -1,0 +1,32 @@
+package org.javacoders.test;
+
+import org.junit.jupiter.api.Test;
+
+import reactor.core.publisher.Flux;
+import reactor.test.StepVerifier;
+
+public class Lec03SVRangeTest {
+	
+	@Test
+	public void test1() {
+		Flux<Integer> range = Flux.range(1, 50);
+		
+		StepVerifier.create(range)
+		
+					// this method wait 50 times onNext() method
+					.expectNextCount(50)
+					.verifyComplete();
+	}
+	
+	@Test
+	public void test2() {
+		Flux<Integer> range = Flux.range(1, 50);
+		
+		StepVerifier.create(range)
+					// this method waits every element is less than 100
+					.thenConsumeWhile(i -> i<100)
+					.verifyComplete();
+	}
+	
+	
+}
